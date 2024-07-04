@@ -1,0 +1,238 @@
+
+    .container {
+    width: 75%;
+    height: 650px;
+    margin: 50px auto 0;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid transparent;
+}
+
+.left-section, .right-section {
+    width: 49%;
+    padding: 20px;
+}
+.cart-actions{
+    display: flex;
+}
+
+#marmeto {
+    color: rgb(185, 187, 191);
+    font-size: 15px;
+    position: absolute;
+    top: 58px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+}
+
+#embrace {
+    color: rgb(0, 0, 0);
+}
+
+.hr {
+    border: none;
+    font-family: 'Inter', sans-serif;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+#dis-price {
+    font-weight: bold;
+    color: rgba(58, 73, 128);
+    font-size: 29px;
+    margin-bottom: -12px;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+}
+
+#org-price {
+    font-size: 18px;
+    color: rgb(128, 128, 128);
+    text-decoration: line-through;
+    font-family: 'Inter', sans-serif;
+}
+
+#color,
+#size {
+    color: rgb(185, 187, 191);
+    font-family: 'Inter', sans-serif;
+}
+
+.radio-button {
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+}
+
+.radio-button input[type="radio"] {
+    display:inline-flex;
+}
+
+.add-to-cart-container {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.cart-actions {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.cart-button {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    width: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+    font-size: larger;
+    color: blue;
+
+}
+
+.cart-button:hover {
+    background-color: #e0e0e0;
+}
+
+#add-to-cart-button {
+    padding: 10px;
+    background-color: rgb(58, 73, 128);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 250px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-symbol {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+#description {
+    color: rgb(163, 163, 163);
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+#product-images {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+}
+
+#main-image {
+    height: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#main-image img {
+    max-width: 100%;
+    height: auto; /* Change height to auto for responsive scaling */
+} 
+
+#other-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+.dis{
+    display: flex;
+    gap: 10px;
+}
+ #dis-per{
+    font-size: 19px;
+    color: red;
+}
+#other-images img {
+    max-width: 100%;
+    height: auto; /* Change height to auto for responsive scaling */
+}
+
+.color-box {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Media Queries */
+
+/* Mobile screen */
+@media screen and (max-width: 767px) {
+    .container {
+        width: 90%; /* Adjust width for smaller screens */
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Adjust height as needed */
+    }
+
+    .left-section, .right-section {
+        width: 100%; /* Full width for both sections */
+    }
+
+    #add-to-cart-button {
+        width: 50%; /* Full width for the Add to Cart button */
+    }
+
+    #main-image img {
+        max-width: 100%; /* Ensure main image scales properly */
+        height: auto; /* Allow main image to scale proportionally */
+    }
+
+    #other-images {
+        grid-template-columns: repeat(3, 1fr); /* Two columns for smaller screens */
+    }
+
+    #other-images img {
+        max-width: 100%; /* Ensure other images scale properly */
+        height: auto; /* Allow other images to scale proportionally */
+    }
+}
+
+
+/* Tablet screen */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        width: 90%; /* Adjust width for tablets */
+    }
+}
+
+/* Desktop screen (above 1024px) */
+@media screen and (min-width: 1250px) {
+    .container {
+        width: 85%; /* Reset width for desktop */
+    }
+    #main-image {
+        height: 500px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    #main-image img {
+        height: 490px;
+        width: 430px; 
+        /* Ensure the image scales properly within the height */
+    }
+    #other-images img {
+        width: 120px; /* Ensure other images scale properly */
+        height: 150px;
+        
+         /* Allow other images to scale proportionally */
+    }
+    #other-images {
+        display: grid;
+        width: 450px;
+        gap: 5px;
+        margin-left: 70px;
+    }
+}
+
